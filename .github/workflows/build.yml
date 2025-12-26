@@ -7,10 +7,10 @@ on:
 jobs:
   build:
     env:
-      PROJECT_REPOSITORY: nushell/nushell
-      PROJECT_REF: refs/tags/0.109.1
-      PROJECT_PATH: nushell
-      PROJECT_BIN: nu
+      PROJECT_REPOSITORY: watchexec/watchexec
+      PROJECT_REF: refs/tags/v2.3.2
+      PROJECT_PATH: watchexec
+      PROJECT_BIN: watchexec
     strategy:
       matrix:
         os: [ubuntu-24.04, windows-2022]
