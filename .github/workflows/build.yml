@@ -65,12 +65,12 @@ jobs:
         run: |
           rm -f Cargo.lock
           cargo update
-          cargo b -r --no-default-features --features ""
+          cargo b -r
 
       - name: Archive
         uses: actions/upload-artifact@v5
         with:
-          name: coreutils_${{ runner.os }}
+          name: ${{ env.PROJECT_BIN }}_${{ runner.os }}
           path: |
             ${{ env.PROJECT_PATH }}/target/release/*.so
             ${{ env.PROJECT_PATH }}/target/release/*.dll
