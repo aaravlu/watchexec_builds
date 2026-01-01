@@ -8,7 +8,7 @@ jobs:
   build:
     env:
       PROJECT_REPOSITORY: watchexec/watchexec
-      PROJECT_REF: refs/tags/v2.3.2
+      PROJECT_VERSION: v2.3.2
       PROJECT_PATH: watchexec
       PROJECT_BIN: watchexec
     strategy:
@@ -49,7 +49,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: ${{ env.PROJECT_REPOSITORY }}
-          ref: ${{ env.PROJECT_REF }}
+          ref: refs/tags/${{ env.PROJECT_VERSION }}
           path: ${{ env.PROJECT_PATH }}
 
       - name: Copy config file
