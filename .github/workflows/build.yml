@@ -45,7 +45,7 @@ jobs:
       - name: Checkout self
         uses: actions/checkout@v6
 
-      - name: Checkout project
+      - name: Checkout ${{ env.PROJECT_PATH }}
         uses: actions/checkout@v6
         with:
           repository: ${{ env.PROJECT_REPOSITORY }}
