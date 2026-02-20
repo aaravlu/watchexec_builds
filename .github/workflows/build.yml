@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Windows Config
-        if: matrix.os == 'Windows'
+        if: runner.os == 'Windows'
         shell: pwsh
         run: |
           git config --system core.longpaths true
@@ -35,7 +35,7 @@ jobs:
           echo "Removed link.exe in git"
 
       - name: Setup MSVC
-        if: matrix.os == 'Windows'
+        if: runner.os == 'Windows'
         uses: ilammy/msvc-dev-cmd@v1
         with:
           toolset: 14.29
