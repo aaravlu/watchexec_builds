@@ -2,12 +2,11 @@
 rustflags = [
     "-C", "target-cpu=znver3"
 ]
-
-[target.'cfg(target_os = "windows")']
+[target.'cfg(windows)']
 rustflags = [
-"--cfg", "windows_slim_errors"
+    "--cfg", "windows_slim_errors"
 ]
-[target.'cfg(target_os = "linux")']
+[target.'cfg(unix)']
 rustflags = [
 ]
 
